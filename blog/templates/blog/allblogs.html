@@ -114,12 +114,12 @@
         {% for blog in blogs.all %}
         <div class="row-md-4">
           <div class="card mb-4 box-shadow">
-            <h3>{{blog.title}}</h3>
+		  <a href='{{blog.id}}'><h3>{{blog.title}}</h3></a>
 	    <hr/>
-	    <p>{{blog.pup_date}}</p>
+	    <p>{{blog.pub_date_pretty}}</p>
             <img class="img-fluid" src="{{blog.image.url}}" height='200' width='200'/>
             <div class="card-body">
-	     <p class="card-text">{{blog.body}}</p>
+	     <p class="card-text">{{blog.summary}}</p>
             </div>
           </div>
         </div>
